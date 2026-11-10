@@ -1,4 +1,4 @@
-# Rapture – Lakestream Platform
+# TaxiStream Lakehouse
 
 A lakehouse on public NYC taxi trip data that lands trips by batch and by stream, cleans them through bronze, silver and gold Delta tables, and serves tested dbt marts. It runs on one laptop for free.
 
@@ -10,7 +10,7 @@ A lakehouse on public NYC taxi trip data that lands trips by batch and by stream
 
 ## Why this exists
 
-The NYC Taxi and Limousine Commission (TLC) publishes a Parquet file of yellow taxi trips every month, a few million rows each. The files are real data with real problems: negative fares, dropoffs before pickups, timestamps years outside the file's month, column types and casing that drift between months, and no trip ID to deduplicate on. Most data engineering demos stop at loading one clean file into one table. Rapture covers the part a data engineer actually owns: two kinds of ingestion (files and events), cleaning rules with a quarantine table, reruns that do not duplicate data, quality gates that stop bad data from moving forward, scheduled backfills, and tested models that a dashboard can trust. Everything runs in Docker Compose with no cloud account.
+The NYC Taxi and Limousine Commission (TLC) publishes a Parquet file of yellow taxi trips every month, a few million rows each. The files are real data with real problems: negative fares, dropoffs before pickups, timestamps years outside the file's month, column types and casing that drift between months, and no trip ID to deduplicate on. Most data engineering demos stop at loading one clean file into one table. TaxiStream covers the part a data engineer actually owns: two kinds of ingestion (files and events), cleaning rules with a quarantine table, reruns that do not duplicate data, quality gates that stop bad data from moving forward, scheduled backfills, and tested models that a dashboard can trust. Everything runs in Docker Compose with no cloud account.
 
 ## What it does
 
@@ -148,7 +148,7 @@ GitHub Actions runs ruff, pytest (unit tests on small fixtures with a local Spar
 Planned layout. Folders appear as phases land.
 
 ```
-rapture-lakestream-platform/
+taxistream-lakehouse/
 ├── docker-compose.yml          # MinIO, Postgres, Airflow, Spark, Redpanda, Streamlit
 ├── Makefile                    # make up, data, batch, stream, dbt, test, bench
 ├── .env.example
@@ -170,7 +170,7 @@ rapture-lakestream-platform/
 │   ├── rules.yml               # silver rejection rules
 │   └── run_gate.py
 ├── airflow/dags/               # tlc_monthly_batch.py, stream_to_silver.py
-├── dbt/rapture/                # staging, marts, tests, profiles.yml
+├── dbt/taxistream/                # staging, marts, tests, profiles.yml
 ├── dashboard/app.py            # Streamlit
 ├── notebooks/eda.ipynb
 ├── tests/                      # unit/, integration/, fixtures/
@@ -194,8 +194,8 @@ Target workflow, available once Phase 1 lands. Commands and ports may change whi
 **Run it**
 
 ```bash
-git clone https://github.com/striderzz/rapture-lakestream-platform.git
-cd rapture-lakestream-platform
+git clone https://github.com/striderzz/taxistream-lakehouse.git
+cd taxistream-lakehouse
 cp .env.example .env            # MinIO keys, Airflow admin, month range
 
 make up                         # docker compose up -d (core + batch services)
@@ -249,7 +249,7 @@ No results yet. Each value is filled from a real run, with raw output in `docs/r
 
 ## Related projects
 
-- [Precog – Fraud MLOps](https://github.com/striderzz/precog-fraud-mlops) uses the same ideas on a different problem: a Kafka-API event stream, layered offline tables, and checks before data is used for features. No code is shared between the two repos.
+- [FraudSight MLOps](https://github.com/striderzz/fraudsight-mlops) uses the same ideas on a different problem: a Kafka-API event stream, layered offline tables, and checks before data is used for features. No code is shared between the two repos.
 
 ## Author
 

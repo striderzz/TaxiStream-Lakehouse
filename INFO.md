@@ -1,4 +1,4 @@
-# Rapture – interview prep
+# TaxiStream Lakehouse: interview prep
 
 Companion to the README. Everything here describes the design and the plan. No results exist yet: wherever a number belongs, it stays a placeholder until a real run fills it in `docs/results/`.
 

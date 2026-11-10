@@ -1,4 +1,4 @@
-# CLAUDE.md: Rapture build guide
+# CLAUDE.md: TaxiStream Lakehouse build guide
 
 This file tells Claude (Claude Code) how to build this project. Read **README.md** first: it is the design spec. **INFO.md** is the interview prep companion. This file is the build plan.
 
