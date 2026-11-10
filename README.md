@@ -1,4 +1,4 @@
-# Meridian
+# Meridian – Lakestream Platform
 
 **Real-time + batch data lakehouse for NYC ride-hailing analytics**
 
@@ -89,7 +89,7 @@ Slowly changing dimensions (**SCD Type 2**) are handled with dbt snapshots.
 ## Planned repository structure
 
 ```
-Meridian/
+meridian-lakestream-platform/
 ├── infra/terraform/          # AWS + Snowflake infrastructure as code
 ├── docker/                   # docker-compose: Kafka, Spark, Airflow, Postgres
 ├── producers/                # Kafka trip-event simulator
