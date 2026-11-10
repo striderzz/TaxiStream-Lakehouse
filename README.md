@@ -1,4 +1,4 @@
-# Meridian – Lakestream Platform
+# Rapture – Lakestream Platform
 
 **Real-time + batch data lakehouse for NYC ride-hailing analytics**
 
@@ -10,7 +10,7 @@ Kafka · Spark Structured Streaming · Delta Lake · Apache Airflow · dbt · Sn
 
 ## Overview
 
-Meridian is an end-to-end data engineering platform built on public **NYC TLC trip records**, which cover millions of yellow taxi, green taxi and for-hire vehicle trips every month.
+Rapture is an end-to-end data engineering platform built on public **NYC TLC trip records**, which cover millions of yellow taxi, green taxi and for-hire vehicle trips every month.
 
 It combines two pipelines:
 
@@ -89,7 +89,7 @@ Slowly changing dimensions (**SCD Type 2**) are handled with dbt snapshots.
 ## Planned repository structure
 
 ```
-meridian-lakestream-platform/
+rapture-lakestream-platform/
 ├── infra/terraform/          # AWS + Snowflake infrastructure as code
 ├── docker/                   # docker-compose: Kafka, Spark, Airflow, Postgres
 ├── producers/                # Kafka trip-event simulator

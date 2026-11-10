@@ -1,4 +1,4 @@
-# CLAUDE.md: Meridian build guide
+# CLAUDE.md: Rapture build guide
 
 This file tells Claude (Claude Code) how to build this project. Read **README.md** first: it is the design spec. This file is the build plan.
 
