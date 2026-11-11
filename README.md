@@ -148,7 +148,7 @@ GitHub Actions runs ruff, pytest (unit tests on small fixtures with a local Spar
 Planned layout. Folders appear as phases land.
 
 ```
-taxistream-lakehouse/
+TaxiStream-Lakehouse/
 ├── docker-compose.yml          # MinIO, Postgres, Airflow, Spark, Redpanda, Streamlit
 ├── Makefile                    # make up, data, batch, stream, dbt, test, bench
 ├── .env.example
@@ -194,8 +194,8 @@ Target workflow, available once Phase 1 lands. Commands and ports may change whi
 **Run it**
 
 ```bash
-git clone https://github.com/striderzz/taxistream-lakehouse.git
-cd taxistream-lakehouse
+git clone https://github.com/striderzz/TaxiStream-Lakehouse.git
+cd TaxiStream-Lakehouse
 cp .env.example .env            # MinIO keys, Airflow admin, month range
 
 make up                         # docker compose up -d (core + batch services)
@@ -249,7 +249,7 @@ No results yet. Each value is filled from a real run, with raw output in `docs/r
 
 ## Related projects
 
-- [FraudSight MLOps](https://github.com/striderzz/fraudsight-mlops) uses the same ideas on a different problem: a Kafka-API event stream, layered offline tables, and checks before data is used for features. No code is shared between the two repos.
+- [FraudSight MLOps](https://github.com/striderzz/FraudSight-MLOps) uses the same ideas on a different problem: a Kafka-API event stream, layered offline tables, and checks before data is used for features. No code is shared between the two repos.
 
 ## Author
 
